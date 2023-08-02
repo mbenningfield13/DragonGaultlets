@@ -500,14 +500,14 @@ def getability(pclass, mana, inte, level):
 	print("Choose an ability")
 	if pclass == "Champion":# Champion Section
 		cost = inte * level
-		print("[1] Cleaving Strike ["+cost+" mana]")
-		print("[2] Melting Thrust ["+cost+" mana]")
-		print("[3] Critical Bash ["+cost+" mana]")
+		print("[1] Cleaving Strike ["+str(cost)+" mana]")
+		print("[2] Melting Thrust ["+str(cost)+" mana]")
+		print("[3] Critical Bash ["+str(cost)+" mana]")
 		cost = inte * level + 1
-		print("[4] Purify ["+cost+" mana]")
+		print("[4] Purify ["+str(cost)+" mana]")
 		cost = inte * (level)
-		input()
-		if input == "1":
+		choice = input()
+		if choice == "1":
 			ability = "cleaving strike"
 			if (mana >= cost):
 				mana = mana - cost
@@ -518,7 +518,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif input == "2":
+		elif choice == "2":
 			ability = "melting thrust"
 			if (mana >= cost):
 				mana = mana - cost
@@ -529,7 +529,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "3") :
+		elif (choice == "3") :
 			ability = "critical bash"
 			if (mana >= cost) :
 				mana = mana - cost
@@ -540,7 +540,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "4"):
+		elif (choice == "4"):
 			ability = "purify"
 			if (mana >= cost): 
 				cost = inte * (level + 1)
@@ -559,14 +559,14 @@ def getability(pclass, mana, inte, level):
 	
 	elif (pclass == "Wizard"): #Wizard Section
 		cost = inte * (level)
-		print("[1] Fireball ["+cost+" mana]")
-		print("[2] Acid Splash ["+cost+" mana]")
+		print("[1] Fireball ["+str(cost)+" mana]")
+		print("[2] Acid Splash ["+str(cost)+" mana]")
 		cost = inte * (level + 2)
-		print("[3] Summon Storm ["+cost+" mana]")
-		print("[4] Spell of Healing ["+cost+" mana]")
+		print("[3] Summon Storm ["+str(cost)+" mana]")
+		print("[4] Spell of Healing ["+str(cost)+" mana]")
 		cost = inte * (level)
-		input()
-		if (input == "1"):
+		choice = input()
+		if (choice == "1"):
 			ability = "fireball"
 			if (mana >= cost):
 				mana = mana - cost
@@ -577,7 +577,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "2"):
+		elif (choice == "2"):
 			ability = "acid spalsh"
 			if (mana >= cost): 
 				mana = mana - cost
@@ -588,7 +588,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "3"):
+		elif (choice == "3"):
 			ability = "summon storm"
 			if (mana >= cost + 2):
 				mana = mana - cost
@@ -599,7 +599,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "4"):
+		elif (choice == "4"):
 			ability = "spell of healing"
 			if (mana >= cost): 
 				cost = inte * (level + 2)
@@ -618,14 +618,14 @@ def getability(pclass, mana, inte, level):
 	
 	elif (pclass == "Assassin"):  # Assassin Section
 		cost = inte * (level)
-		print("[1] Back Stab ["+cost+" mana]")
-		print("[2] Headcrack ["+cost+" mana]")
-		print("[3] Poison ["+cost+" mana]")
+		print("[1] Back Stab ["+str(cost)+" mana]")
+		print("[2] Headcrack ["+str(cost)+" mana]")
+		print("[3] Poison ["+str(cost)+" mana]")
 		cost = inte * 10
-		print("[4] Assassinate ["+cost+" mana]")
+		print("[4] Assassinate ["+str(cost)+" mana]")
 		cost = inte * (level)
-		input()
-		if (input == "1"):
+		choice = input()
+		if (choice == "1"):
 			ability = "back stab"
 			if (mana >= cost):
 				mana = mana - cost
@@ -636,7 +636,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "2"): 
+		elif (choice == "2"): 
 			ability = "headcrack"
 			if (mana >= cost): 
 				mana = mana - cost
@@ -647,7 +647,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif (input == "3"):
+		elif (choice == "3"):
 			ability = "poison"
 			if mana >= cost: 
 				mana = mana - cost
@@ -658,7 +658,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif input == "4": 
+		elif choice == "4": 
 			ability = "assassinate"
 			if mana >= cost: 
 				cost = inte * 10
@@ -677,12 +677,12 @@ def getability(pclass, mana, inte, level):
 	
 	elif pclass == "Cleric":  # Cleric Section
 		cost = inte * (level)
-		print("[1] Smite ["+cost+" mana]")
-		print("[2] Enflame ["+cost+" mana]")
-		print("[3] Atonement ["+cost+" mana]")
-		print("[4] Flash Heal ["+cost+" mana]")
-		input()
-		if input == "1": 
+		print("[1] Smite ["+str(cost)+" mana]")
+		print("[2] Enflame ["+str(cost)+" mana]")
+		print("[3] Atonement ["+str(cost)+" mana]")
+		print("[4] Flash Heal ["+str(cost)+" mana]")
+		choice = input()
+		if choice == "1": 
 			ability = "smite"
 			if mana >= cost: 
 				mana = mana - cost
@@ -693,7 +693,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif input == "2": 
+		elif choice == "2": 
 			ability = "enflame"
 			if mana >= cost: 
 				mana = mana - cost
@@ -704,7 +704,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif input == "3": 
+		elif choice == "3": 
 			ability = "atonement"
 			if mana >= cost: 
 				mana = mana - cost
@@ -715,7 +715,7 @@ def getability(pclass, mana, inte, level):
 				return  ability, mana 
 			
 		
-		elif input == "4": 
+		elif choice == "4": 
 			ability = "flash heal"
 			if mana >= cost: 
 				mana = mana - cost
@@ -733,10 +733,10 @@ def getability(pclass, mana, inte, level):
 	
 	elif pclass == "Ranger": # Ranger Section
 		cost = inte * (level)
-		print("[1] Fire Arrow ["+cost+" mana]")
-		print("[2] Poision Arrow ["+cost+" mana]")
-		print("[3] Animal Attack ["+cost+" mana]")
-		print("[4] Healing Herbs ["+cost+" mana]")
+		print("[1] Fire Arrow ["+str(cost)+" mana]")
+		print("[2] Poision Arrow ["+str(cost)+" mana]")
+		print("[3] Animal Attack ["+str(cost)+" mana]")
+		print("[4] Healing Herbs ["+str(cost)+" mana]")
 		input()
 		if input == "1": 
 			ability = "fire arrow"
@@ -789,11 +789,11 @@ def getability(pclass, mana, inte, level):
 	
 	elif pclass == "Alchemist":  # Alchemist Section
 		cost = inte * (level)
-		print("[1] Home-made Bomb ["+cost+" mana]")
-		print("[2] Poison Pot ["+cost+" mana]")
+		print("[1] Home-made Bomb ["+str(cost)+" mana]")
+		print("[2] Poison Pot ["+str(cost)+" mana]")
 		cost = inte * (level + 2)
-		print("[3] Lightning-in-a-bottle ["+cost+" mana]")
-		print("[4] Healing Potion ["+cost+" mana]")
+		print("[3] Lightning-in-a-bottle ["+str(cost)+" mana]")
+		print("[4] Healing Potion ["+str(cost)+" mana]")
 		cost = inte * (level)
 		choice = input()
 		if choice == "1": 
@@ -930,6 +930,7 @@ def menu():
 		inventory()
 	
 	elif (choice == "3"): 
+		global mana, mmana, hp, mhp, stre, inte, dext, bhp, bphp
 		mhp = stre * 20
 		mmana = inte * 10
 		hp = mhp
@@ -947,7 +948,7 @@ def menu():
 
 	# Setting Up Enemys
 def sarena():
-	global etype, elevel, mehp, mana, mmana, name, level, hp, mhp, stre, inte, dext, ehp 
+	global etype, elevel, mehp, mana, mmana, name, level, hp, mhp, stre, inte, dext, ehp, ice, fire, earth, spirt
 	mmana = inte * 10
 	shp = stre * 20
 	mhp = stre * 20
@@ -1037,7 +1038,7 @@ def sarena():
 			etype = "Wolf"
 			random2 = rn.random() % 2 + 1
 			eability = "growl"
-			elevel = random() % (level + 3) + 1
+			elevel = rn.random() % (level + 3) + 1
 			if (random2 == 1): 
 				ehp = shp + rn.random() % (level * 4)
 			
@@ -1180,16 +1181,19 @@ def sarena():
 	elevel = rn.random() % (level + 3) + 1
 	if ((elevel < (level - 3)) or (elevel >(level + 3))):
 		elevel = level
+	if ehp<0:
+		ehp = mehp
 	aarena()
 
 	# Arena Main
 def aarena():
+
 	global etype, elevel, mehp, mana, mmana, name, level, hp, mhp, stre, inte, dext, ehp, fire, ice, earth, air, spirt
 	clear()
 	draw(etype)
-	print("["+etype+" lvl: "+str(elevel)+"] >>> "+str(ehp)+"/"+str(mehp))
-	print("["+name+" "+str(level)+"] >>> "+str(hp)+"/"+str(mhp))
-	print("-Mana- >>> "+str(mana)+"/"+str(mmana))
+	print("["+etype+" lvl: "+str(int(elevel))+"] >>> "+str(int(ehp))+"/"+str(int(mehp)))
+	print("["+name+" "+str(level)+"] >>> "+str(int(hp))+"/"+str(int(mhp)))
+	print("-Mana- >>> "+str(int(mana))+"/"+str(int(mmana)))
 	print("[1] Attack")
 	print("[2] Do ability")
 	print("[3] Inventory")
@@ -1199,51 +1203,7 @@ def aarena():
 	if (choice == "1"):
 		dmg = (stre + inte) + rn.random() % dext * 2
 		ehp = ehp - dmg
-		# If enemy ehp < 0 then
-		if (ehp <= 0): 
-			clear()
-			print("[*] You killed the "+etype)
-			print("Type [1] to continue")
-			if (etype == "Fire Dragon"):
-			
-				fire = True
-			
-			if (etype == "Ice Dragon"):
-			
-				ice = True
-			
-			if (etype == "Earth Dragon"):
-			
-				earth = True
-			
-			if (etype == "Air Dragon"):
-			
-				air = True
-			
-			if (etype == "Spirt Dragon"):
-			
-				spirt = True
-			
-			input()
-			if (fire == True and ice == True and earth == True and air == True and spirt == True):
-			
-				clear()
-				print("""
-
-       ___         __    __ _____    __
-/\_/\ /___\/\ /\  / / /\ \ \\_  /\/\ \ \\
-\_ _//  / / \ \ \ \/  \/ / / / / / \/  /
- / \/ \_/ \ \_/ /  \  /\  /\/ /_/ /\  /
- \_/\___/  \___/    \/  \/\____/\_\ \/
-
-            Made by: Max
-""")
-				leave()
-			else:
-				rarena()
-			
-
-		
+		deathCheck()		
 		random2 = rn.random() % 2 + 1
 		edmg = dmg
 		# Setting up enemy damage
@@ -1277,13 +1237,13 @@ def aarena():
 		
 		aarena()
 	
-	elif (input == "99"):
+	elif (choice == "99"):
 		menu()
 	
-	elif (input == "2"):
+	elif (choice == "2"):
 		darena()
 	
-	elif (input == "3"):
+	elif (choice == "3"):
 		iarena()
 	
 	else:
@@ -1291,186 +1251,8 @@ def aarena():
 	
 
 	# Using items from Inventory
-def iarena():
-	clear()
-
-	print("Inventory")
-	print("[1] Health Potion, "+hpotion+" (Heals you to max health)")
-	print("[2] Mana Potion, "+mpotion+" (Restores you Mana to maximum)")
-	print("[99] Exit")
-	input()
-	if (input == "1"):
-		if (hpotion > 0):
-			hpotion = hpotion - 1
-			hp = mhp
-		
-	
-	if (input == "2"):
-		if (mpotion > 0): 
-			mpotion = mpotion - 1
-			mana = mmana
-		
-	
-	elif (input == "99"): 
-		aarena()
-	
-	iarena()
-
-	# Picking spells and doing damage
-def darena():
-	global rxp, rgold, xp, gold, level, xpb, xpl, skill, dext, inte, stre, level, mana, hp, etype
-	clear()
-	action, mana = getability(pclass, mana, inte, level)
-	# Champion spells
-	if (action == "cleaving strike"): 
-		dmg = (stre + inte + dext) + rn.random() % (dext * 2)
-	
-	elif (action == "melting thrust"): 
-		dmg = (stre + inte + dext) + rn.random() % (stre * 2)
-	
-	elif (action == "critical bash"): 
-		dmg = (stre + inte + dext) + rn.random() % (inte * 2)
-	
-	elif (action == "purify"): 
-		hp = hp + inte * (level)+(rn.random() % inte)
-		if (hp > mhp): 
-			hp = mhp
-		
-		aarena()
-	
-	elif (action == "none"): 
-		aarena
-	#Necromancer spells
-	elif (action == "shadow strike"): 
-		dmg = (stre + inte + dext) + rn.random() % (dext * 2)
-	
-	elif (action == "cripple"): 
-		dmg = (stre + inte + dext) + rn.random() % (stre * 2)
-	
-	elif (action == "mutilate"): 
-		dmg = (stre + inte + dext) + rn.random() % (inte * 2)
-	
-	elif (action == "life tap"): 
-		dmg = (stre + inte) + rn.random() % (inte)
-		hp = hp + dmg
-		if (hp > mhp): 
-			hp = mhp
-		
-		ehp = ehp - dmg
-		# If enemy ehp < 0 then
-		if (ehp <= 0): 
-			clear()
-			print("[*] You killed the "+etype)
-			print("Type [1] to continue")
-			input()
-			rarena()
-		
-		aarena()
-	#Assassin spells
-	elif (action == "back stab"): 
-		dmg = (stre + inte + dext) + rn.random() % (dext * 2)
-	
-	elif (action == "headcrack"): 
-		dmg = (stre + inte + dext) + rn.random() % (stre * 2)
-	
-	elif (action == "poison"): 
-		dmg = (stre + inte + dext) + rn.random() % (inte * 2)
-	
-	elif (action == "assassinate"):
-		dmg = (stre + inte + dext) + rn.random() % ((inte + stre) * 3)
-		ehp = ehp - dmg
-		# If enemy ehp < 0 then
-		if (ehp <= 0): 
-			clear()
-			print("[*] You killed the "+etype)
-			print("Type [1] to continue")
-			input()
-			rarena()
-		
-		aarena()
-	#Claric spells
-	elif (action == "smite"): 
-		dmg = (stre + inte + dext) + rn.random() % (dext)
-	
-	elif (action == "enflame"): 
-		dmg = (stre + inte + dext) + rn.random() % (stre)
-	
-	elif (action == "atonement"):
-		dmg = (stre + inte + dext) + rn.random() % (inte)
-	
-	elif (action == "flash heal"):
-		hp = hp + ((stre * level) + (rn.random() % (inte * 2)))
-		if (hp > mhp):
-			hp = mhp
-		
-		aarena()
-	
-
-	# Doing the damage (Enemy)
-	ehp = ehp - dmg
-	# If enemy ehp < 0 then
-	if (ehp <= 0):
-		clear()
-		print("[*] You killed the "+etype)
-		print("Type [1] to continue")
-		input
-		if (etype == "Fire Dragon"):
-		
-			fire = True
-		
-		if (etype == "Ice Dragon"):
-		
-			ice = True
-		
-		if (etype == "Earth Dragon"):
-		
-			earth = True
-		
-		if (etype == "Air Dragon"):
-		
-			air = True
-		
-		if (etype == "Spirt Dragon"):
-		
-			spirt = True
-		
-		if (fire == True and ice == True and earth == True and air == True and spirt == True):
-		
-			clear()
-			print(""""
-
-       ___         __    __ _____    __
-/\_/\ /___\/\ /\  / / /\ \ \\_   \/\ \ \
-\_ _#/  # / \ \ \ \/  \/ / / /\/  \/ /
- / \/ \_#\ \_/ /  \  /\  /\/ /_/ /\  /
- \_/\___/  \___/    \/  \/\____/\_\ \/
-
-            Made by: Max
-
-
-""")
-		
-		rarena()
-	#Ranger spells
-	elif (action == "fire arrow"): 
-		dmg = (stre + inte + dext) + rn.random() % (dext)
-	
-	elif (action == "poision arrow"): 
-		dmg = (stre + inte + dext) + rn.random() % (stre)
-	
-	elif (action == "animal attack"): 
-		dmg = (stre + inte + dext) + rn.random() % (inte)
-	
-	elif (action == "healing herbs"): 
-		hp = hp + ((stre * level) + (rn.random() % (inte * 2)))
-		if (hp > mhp): 
-			hp = mhp
-		
-		aarena()
-	
-
-	# Doing the damage (Enemy)
-	ehp = ehp - dmg
+def deathCheck():
+	global fire, ice, earth, etype, air, spirt, ehp
 	# If enemy ehp < 0 then
 	if (ehp <= 0):
 		clear()
@@ -1513,18 +1295,133 @@ def darena():
 
 """)
 		rarena()
+def iarena():
+	clear()
+	global rxp, rgold, xp, gold, level, xpb, xpl, skill, dext, inte, stre, level, mana, hp, etype, hpotion, mpotion, mmana, mhp
+	print("Inventory")
+	print("[1] Health Potion, "+str(hpotion)+" (Heals you to max health)")
+	print("[2] Mana Potion, "+str(mpotion)+" (Restores you Mana to maximum)")
+	print("[99] Exit")
+	choice = input()
+	if (choice == "1"):
+		if (hpotion > 0):
+			hpotion = hpotion - 1
+			hp = mhp
+		
 	
-	random2 = rn.random() % 2 + 1
-	dmg = (stre + inte) + rn.random() % (dext * 2)
-	edmg = dmg
-	# Setting up enemy damage
-	if (random2 == 1):
-		edmg = edmg + rn.random() % (dext * 2)
+	if (choice == "2"):
+		if (mpotion > 0): 
+			mpotion = mpotion - 1
+			mana = mmana
+		
+	
+	elif (choice == "99"): 
+		aarena()
+	
+	iarena()
+
+	# Picking spells and doing damage
+def darena():
+	global rxp, rgold, xp, gold, level, xpb, xpl, skill, dext, inte, stre, level, mana, hp, etype, ehp
+	clear()
+	action, mana = getability(pclass, mana, inte, level)
+	# Champion spells
+	edmg1 = 1
+	if (action == "cleaving strike"): 
+		dmg = (stre + inte + dext) + rn.random() % (dext * 2)
+	
+	elif (action == "melting thrust"): 
+		dmg = (stre + inte + dext) + rn.random() % (stre * 2)
+	
+	elif (action == "critical bash"): 
+		dmg = (stre + inte + dext) + rn.random() % (inte * 2)
+	
+	elif (action == "purify"): 
+		hp = hp + inte * (level)+(rn.random() % inte)
+		dmg = 0
+		edmg1 = 0
+		if (hp > mhp): 
+			hp = mhp
+
+	#Necromancer spells
+	elif (action == "shadow strike"): 
+		dmg = (stre + inte + dext) + rn.random() % (dext * 2)
+	
+	elif (action == "cripple"): 
+		dmg = (stre + inte + dext) + rn.random() % (stre * 2)
+	
+	elif (action == "mutilate"): 
+		dmg = (stre + inte + dext) + rn.random() % (inte * 2)
+	
+	elif (action == "life tap"): 
+		dmg = (stre + inte) + rn.random() % (inte)
+		hp = hp + dmg
+		if (hp > mhp): 
+			hp = mhp
+		ehp = ehp - dmg
+
+	#Assassin spells
+	elif (action == "back stab"): 
+		dmg = (stre + inte + dext) + rn.random() % (dext * 2)
+	
+	elif (action == "headcrack"): 
+		dmg = (stre + inte + dext) + rn.random() % (stre * 2)
+	
+	elif (action == "poison"): 
+		dmg = (stre + inte + dext) + rn.random() % (inte * 2)
+	
+	elif (action == "assassinate"):
+		dmg = (stre + inte + dext) + rn.random() % ((inte + stre) * 3)
+		ehp = ehp - dmg
+
+	#Claric spells
+	elif (action == "smite"): 
+		dmg = (stre + inte + dext) + rn.random() % (dext)
+	
+	elif (action == "enflame"): 
+		dmg = (stre + inte + dext) + rn.random() % (stre)
+	
+	elif (action == "atonement"):
+		dmg = (stre + inte + dext) + rn.random() % (inte)
+	
+	elif (action == "flash heal"):
+		hp = hp + ((stre * level) + (rn.random() % (inte * 2)))
+		dmg = 0
+		edmg1 = 0
+		if (hp > mhp):
+			hp = mhp
+
+	#Ranger spells
+	elif (action == "fire arrow"): 
+		dmg = (stre + inte + dext) + rn.random() % (dext)
+	
+	elif (action == "poision arrow"): 
+		dmg = (stre + inte + dext) + rn.random() % (stre)
+	
+	elif (action == "animal attack"): 
+		dmg = (stre + inte + dext) + rn.random() % (inte)
+	
+	elif (action == "healing herbs"): 
+		hp = hp + ((stre * level) + (rn.random() % (inte * 2)))
+		if (hp > mhp): 
+			hp = mhp
+		dmg = 0
+		edmg1 = 0
 	
 	else:
-		edmg = edmg - rn.random() % (dext * 2)
+		dmg = int((stre + inte) + rn.random() % (dext * 2))
+	ehp -= dmg
+	deathCheck()
+	# Setting up enemy damage
+	random2 = rn.random() % 2 + 1
+	if edmg1 == 0:
+		edmg = 0
+	elif (random2 == 1):
+		edmg = dmg + rn.random() % (dext * 2)
 	
-	hp = hp - edmg
+	else:
+		edmg = dmg - rn.random() % (dext * 2)
+	hp = int(hp - edmg)
 	# If player hp < 0 then
 	if (hp <= 0):
 		clear()
@@ -1539,9 +1436,9 @@ def darena():
 def rarena():
 	global rxp, rgold, xp, gold, level, xpb, xpl, skill
 	clear()
-	rxp = rn.random() % (level * 2) + 5
-	rgold = rn.random() % (level * 5)
-	rgold = rgold * goldb
+	rxp = int(rn.random() % (level * 2) + 5)
+	rgold = rn.random()*5 + (level)
+	rgold = int(rgold + goldb)
 
 	print("""
 *******************************************************************************
@@ -1573,16 +1470,16 @@ def rrarena():#reward arena
 	print("You recieved "+str(rxp)+" xp")
 	print("You recieved "+str(rgold)+" gold")
 
-	xp = xp + rxp
-	gold = gold + rgold
+	xp += rxp
+	gold += rgold
 	if (xp >= xpl):
 		level = level + 1
 		xpl = xpl + xpb
 		xpb = xpb + 50
 		skill = skill + 5
-		print("You have leveled up to level "+level)
+		print("You have leveled up to level "+str(level))
 	
-	print("Type [1] to continue to the menue")
+	print("Type [1] to continue to the menu")
 	input()
 	menu()
 
@@ -1611,7 +1508,7 @@ def levelalert():
 		xpl = xpl + xpb
 		xpb = xpb + 50
 		skill = skill + 5
-		levelalert
+		levelalert()
 	
 	else:
 		inventory2()
@@ -1620,8 +1517,8 @@ def levelalert():
 def inventory2():
 	global level, xp, xpl, gold, hpotion, mpotion, fire, ice, earth, air, spirt
 	print("[Level] >>> "+str(level))
-	print("[XP] >>> "+str(xp)+"/"+str(xpl))
-	print("[Gold] >>> "+str(gold))
+	print("[XP] >>> "+str(int(xp))+"/"+str(xpl))
+	print("[Gold] >>> "+str(int(gold)))
 	print("[Healing Potions] >>> "+str(hpotion))
 	print("[Mana Potions] >>> "+str(mpotion))
 	print("==================================")
@@ -1697,26 +1594,26 @@ def askill():
 ~~~~~~~~~~~~~~~~~~~~~~~~~YKWmmWmmW@~~~~~~~~~~~~~~~~~~~~~~~~~~
     """)
 
-	print("Available Skillpoints ["+skill+"]")
-	print("1- Strength ["+stre+"]")
-	print("2- Intelligence ["+inte+"]")
-	print("3- Dexterity ["+dext+"]")
+	print("Available Skillpoints ["+str(skill)+"]")
+	print("1- Strength ["+str(stre)+"]")
+	print("2- Intelligence ["+str(inte)+"]")
+	print("3- Dexterity ["+str(dext)+"]")
 	print("99- Exit")
-	input()
+	choice = input()
 	if (skill > 0):
-		if (input == "1"):
+		if (choice == "1"):
 			stre = stre + 1
 			skill = skill - 1
 		
-		elif (input == "2"):
+		elif (choice == "2"):
 			inte = inte + 1
 			skill = skill - 1
 		
-		elif (input == "3"):
+		elif (choice == "3"):
 			dext = dext + 1
 			skill = skill - 1
 		
-		elif (input == "99"):
+		elif (choice == "99"):
 			menu()
 		
 	
